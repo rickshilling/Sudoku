@@ -1,0 +1,62 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e8221f1d1d019524c34df9048d93779a1016c0b3cb9112a99780be5fd2c37d6f
+
+name:           sudoku
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/rickshilling/sudoku#readme>
+homepage:       https://github.com/rickshilling/sudoku#readme
+bug-reports:    https://github.com/rickshilling/sudoku/issues
+author:         Rick Shilling
+maintainer:     rick.shilling@gmail.com
+copyright:      Rick Shilling
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/rickshilling/sudoku
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Sudoku
+  other-modules:
+      Paths_sudoku
+  default-language: Haskell2010
+
+executable sudoku-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , sudoku
+  other-modules:
+      Paths_sudoku
+  default-language: Haskell2010
+
+test-suite sudoku-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , sudoku
+  other-modules:
+      Paths_sudoku
+  default-language: Haskell2010
