@@ -2,5 +2,5 @@ module Main where
 
 import Sudoku
 
-main :: Maybe a -- IO ()
-main = Nothing -- putStrLn ""
+main :: IO ()
+main = putStrLn ""
