@@ -5,7 +5,7 @@ The solver populates possibile entries, eliminates inadmissible redundant entrie
 solve :: Grid -> [Grid]
 solve  = search . prune . choices
 
-search :: Matrix [Char]  [Grid]
+search :: Matrix [Char] ->[Grid]
 search m
   | blocked m  = []
   | complete m = collapse m
