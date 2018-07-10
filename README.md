@@ -1,2 +1,2 @@
 # Sudoku
-Yet another Sudoku solver based on Graham Hutton's specification at the U. of Nottingham
+Yet another Sudoku solver but written in Haskell based on Graham Hutton's specification from the U. of Nottingham.  
