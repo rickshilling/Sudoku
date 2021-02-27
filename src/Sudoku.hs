@@ -1,48 +1,9 @@
 module Sudoku
     (
       solve,
-      rowComplete,
-      complete,
-      mm,
-      blocked,
-      blockedRow,
-      blockedEntry,
-      search,
-      expand,
-      expandHelper,
-      expandRow,
-      p,
-      prune,
-      pruneRow,
-      pruneRowHelper,
-      pruneEntries,
-      pruneEntry,
-      ee,
-      m,
-      r,
-      s,
       Row,
       Matrix,
-      Grid,
-      collapse,
-      collapseRow,
-      rowChoice,
-      choices,
-      candidates,
-      valid,
-      nodups,
-      getCols,
-      getBox,
-      getRows,
-      getRow,
-      boxToColIndices,
-      boxToRowIndices,
-      boxs,
-      cols,
-      rows,
-      empty,
-      soln,
-      easy
+      Grid
     )
   where
 
@@ -81,13 +42,6 @@ soln   = [
   "157492683",
   "694738215",
   "328561749"]
-
-r = [[1,2],[3,4,5]] :: Row [Int]
-s = [[1,3],[1,4],[1,5],[2,3],[2,4],[2,5]] :: Row [Int]
-m = [["12","3"],["4","12"]]
-p = [["1","124"],["13","34"]]
-ee = choices easy
-mm = [["1","12","1"],["34","","3"]]
 
 solve :: Grid -> [Grid]
 solve  = search . prune . choices
